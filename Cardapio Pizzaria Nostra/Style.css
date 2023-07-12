@@ -1,0 +1,26 @@
+.titulo
+	{
+	color: red;
+	margin: auto;
+	text-align: center;
+	}
+
+body
+  	{
+  	 background-color: #F5F5DC;
+  	}
+
+.subtitulo
+	{
+	
+	background-color: red;
+	text-color: white;
+	
+	border: solid;
+	border-radius: 0%;
+	color: black;
+	}
+
+.pizza__sabor{
+	
+	}
