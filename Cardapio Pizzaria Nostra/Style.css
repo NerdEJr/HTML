@@ -24,3 +24,8 @@ body
 .pizza__sabor{
 	
 	}
+
+.cardapio__pizza-salgada {
+	background-color: yellow;
+	margin-right: 65%;
+}
