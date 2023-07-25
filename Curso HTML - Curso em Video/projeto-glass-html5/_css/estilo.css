@@ -139,6 +139,14 @@ section#corpo {
     padding-right: 15px;
 }
 
+article#main-noticia h2{
+    font-size: 15pt;
+    color: #606060;
+    background-color: #ddd;
+    padding: 5px 0px 5px 0px;
+    margin: 10px 0px 10px 0px;
+}
+
 
 aside#lateral {
     display: block;
