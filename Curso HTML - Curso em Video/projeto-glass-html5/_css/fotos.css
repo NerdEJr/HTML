@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+ul#album-fts {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+}
+
+ul#album-fts li{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 5px solid black;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4) ;
+}
+
+ul#album-fts#ft01 {
+    background: url('../_imagens/galeria-01.jpg') no-repeat;   
+}
