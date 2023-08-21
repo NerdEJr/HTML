@@ -39,10 +39,10 @@
                         </hgroup>
                     </header>
                 </article>
-                <form>
+                <form method="post" id="fContato" action="">
                     <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
-                            <p>Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+                            <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
                             <p><label for="cSenha">Senha: </label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"</p>
                             <p><label for="cEmail">E-mail:</label> <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40"</p>
                             <fieldset id="sexo">
@@ -58,22 +58,40 @@
                         <legend>Endereço do Usuário</legend>
                         <p><label for="cLogradouro">Logradouro:</label> <input type="text" name="tLogradouro" id="cLogradouro" size="15" maxlength="45" placeholder="Rua, Av, Travessa ..."/></p>
                         <p><label for="cNumero">Número:</label> <input type="number" name="tNumero" id="cNumero" min="0" max="9999"/></p>
-                        <p>Estado: <input type="" name="" id=""</p>
-                        <p>Cidade: <input type="" name="" id=""</p>
+                        <p><label for="cEstado">Estado:</label>
+                            <select>
+                                <optgroup label="Região Sudeste">
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="PR">Paraná</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                </optgroup>
+                            </select> </p>
+                        <p><label for="cCidade">Cidade: <input type="text" name="tCidade" id="cCidade" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades"</p>
+                        <datalist id="cidades">
+                            <option >Rio de Janeiro</option>
+                            <option >Nova Iguaçu</option>
+                            <option >Niterói</option>
+                            <option >Belford Roxo</option>
+                        </datalist>
                     </fieldset>
 
                     <fieldset  id="mensagem">
                         <legend>Mensagem do Usuário</legend>
-                        Grau de Urgência:
-                        Mensagem:
+                        <p><label for="cUrgencia">Grau de Urgência: Mín<input type="range" name="tUrgencia" id="cUrgencia" min="0" max="10" step="2">Máx</label></p>
+                        <p><label for="cMensagem">Mensagem: <textarea name="tMensagem" id="cMensagem" cols="30" rows="10" placeholder="Deixe aqui sua mensagem"></textarea></label></p>
                     </fieldset>
 
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
-                        Gostaria de adquirir um Google Glass quando disponível
-                        Cor:
-                        Quantidade:
-                        Preço Total: R$
+                        <p><label>Gostaria de adquirir um Google Glass quando disponível</label></p>
+                        <p><label>Cor:</label></p>
+                        <p><label>Quantidade:</label></p>
+                        <p><label>Preço Total: R$</label></p>
                     </fieldset>
                 </form>
             </section>
