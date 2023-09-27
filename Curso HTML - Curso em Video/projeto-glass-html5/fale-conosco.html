@@ -7,6 +7,13 @@
         <title>Tudo sobre Google Glass</title>
     </head>
     <script src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total(){
+            var qtd = parseInt(document.getElementById('cQuant').value);
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+        }
+    </script>
     <body>
         <div id="interface">
             <header id="cabecalho">
@@ -39,7 +46,8 @@
                         </hgroup>
                     </header>
                 </article>
-                <form method="post" id="fContato" action="">
+                
+                <form method="post" id="fContato" action="" oninput="calc_total();">
                     <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
                             <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
@@ -65,11 +73,13 @@
                                     <option value="SP">São Paulo</option>
                                     <option value="MG">Minas Gerais</option>
                                 </optgroup>
+                                
                                 <optgroup label="Região Sul">
                                     <option value="PR">Paraná</option>
                                     <option value="SC">Santa Catarina</option>
                                     <option value="RS">Rio Grande do Sul</option>
                                 </optgroup>
+
                             </select> </p>
                         <p><label for="cCidade">Cidade: <input type="text" name="tCidade" id="cCidade" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades"</p>
                         <datalist id="cidades">
@@ -88,15 +98,16 @@
 
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
-                        <p><label>Gostaria de adquirir um Google Glass quando disponível</label></p>
-                        <p><label>Cor:</label></p>
-                        <p><label>Quantidade:</label></p>
-                        <p><label>Preço Total: R$</label></p>
+                        <p><input type="checkbox" name="tPed" id="cPed"<label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                        <p><label for="cCor">Cor:</label> <input type="color" name="tCor" id="cCor"></p>
+                        <p><label for="cQuant">Quantidade:</label><input type="number" name="tQuant" id="cQuant" min="0" max="10" value="0"></p>
+                        <p><label for="cTot">Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
                     </fieldset>
+
+                    <input type="image" name="tEnviar" id="cEnviar" src="./_imagens/botao-enviar.png">
+                
                 </form>
             </section>
-
-[BOTÃO ENVIAR]
 
                 <footer id="rodape">
                     <p>Copyright 2013 - by Gustavo Guanabara<br/>
